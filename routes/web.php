@@ -1,6 +1,6 @@
 <?php
 
-//curl -X POST "Accept: application/x-www-form-urlencoded; charset=UTF-8" -F "nome=99" -F  "_token=eb91NqLjklMfOKDe58EPAwk7hbz0lt5lrgaKpIKr"    "http://127.0.0.1:8000/painel/turmas/5"
+//curl -X POST "Accept: application/x-www-form-urlencoded; charset=UTF-8" -F "nome=99" -F  "_token=eb91NqLjklMfOKDe58EPAwk7hbz0lt5lrgaKpIKr"    "http://127.0.0.1/painel/turmas/5"
 
 /*
 Route::get('/', function () {

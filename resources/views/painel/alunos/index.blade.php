@@ -7,7 +7,7 @@
 <div class="divider"></div>
 
 <div class="col-md-12">
-    <form class="form-padrao form-inline padding-20 form-pesquisa" method="POST" send="http://127.0.0.1:8000/painel/alunos/pesquisar/">
+    <form class="form-padrao form-inline padding-20 form-pesquisa" method="POST" send="http://127.0.0.1/painel/alunos/pesquisar/">
         <a href="" class="btn-cadastrar" data-toggle="modal" data-target="#modalGestao"><i class="fa fa-plus-circle"></i> Cadastrar</a>
         <input type="text" placeholder="Pesquisa" class="texto-pesquisa">
     </form>
@@ -34,13 +34,13 @@
         <td>{{$aluno->matricula}}</td>
         <td>{{$aluno->turma}}</td>
         <td>
-            <a href='{{url("http://127.0.0.1:8000/painel/alunos/pais/{$aluno->id}")}}' class="edit">
+            <a href='{{url("http://127.0.0.1/painel/alunos/pais/{$aluno->id}")}}' class="edit">
                 <i class="fa fa-users"></i>
             </a>
-            <a class="edit" onclick="edit('http://127.0.0.1:8000/painel/alunos/{{$aluno->id}}', 'id_turma')">
+            <a class="edit" onclick="edit('http://127.0.0.1/painel/alunos/{{$aluno->id}}', 'id_turma')">
                 <i class="fa fa-pencil-square-o"></i>
             </a>
-            <a class="delete" onclick="del('http://127.0.0.1:8000/painel/alunos/{{$aluno->id}}')">
+            <a class="delete" onclick="del('http://127.0.0.1/painel/alunos/{{$aluno->id}}')">
                 <i class="fa fa-times"></i>
             </a>
         </td>
@@ -71,7 +71,7 @@
                 <div class="alert alert-warning msg-war" role="alert" style="display: none"></div>
                 <div class="alert alert-success msg-suc" role="alert" style="display: none"></div>
 
-                <form class="form-padrao form-gestao" action="http://127.0.0.1:8000/painel/alunos" send="http://127.0.0.1:8000/painel/alunos">
+                <form class="form-padrao form-gestao" action="http://127.0.0.1/painel/alunos" send="http://127.0.0.1/painel/alunos">
                     <input type="hidden" id="_method" name="_method" value="POST" />
 
                     {!! csrf_field() !!}
@@ -105,6 +105,6 @@
 
 @section('scripts')    
     <script>
-        var urlAdd = 'http://127.0.0.1:8000/painel/alunos';
+        var urlAdd = 'http://127.0.0.1/painel/alunos';
     </script>
 @endsection
