@@ -32,7 +32,7 @@
         <td>{{$pai->nome}}</td>
         <td>{{$pai->email}}</td>
         <td>
-            <a class="delete" onclick="del('/painel/alunos/deletar-pai/{{$id}}/{{$pai->id}}')">
+            <a class="delete" onclick="del('/laravel55/painel/alunos/deletar-pai/{{$id}}/{{$pai->id}}')">
                 <i class="fa fa-times"></i>
             </a>
         </td>
@@ -63,7 +63,7 @@
                 <div class="alert alert-warning msg-war" role="alert" style="display: none"></div>
                 <div class="alert alert-success msg-suc" role="alert" style="display: none"></div>
 
-                <form class="form-padrao form-gestao" action="/painel/alunos/adicionar-pai/{{$id}}" send="/painel/alunos/adicionar-pai/{{$id}}">
+                <form class="form-padrao form-gestao" action="/laravel55/painel/alunos/adicionar-pai/{{$id}}" send="/laravel55/painel/alunos/adicionar-pai/{{$id}}">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         {!!Form::select('id_pai[]', $paisAdd, null, ['class' => 'form-control', 'multiple'])!!}

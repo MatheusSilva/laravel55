@@ -1,1 +1,1 @@
-Home do Site - Sistema em Laravel 5.5
+Home do Site - Sistema em Laravel 5.6

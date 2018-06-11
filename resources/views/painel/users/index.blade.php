@@ -11,9 +11,9 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>Nome</th>
-        <th>E-mail</th>
-        <th width="150">Ações</th>
+        <th scope="col">Nome</th>
+        <th scope="col">E-mail</th>
+        <th scope="col" width="150">Ações</th>
     </tr>
     {{-- Listagem dos carros --}}
     @forelse( $users as $user )

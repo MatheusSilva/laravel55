@@ -27,7 +27,7 @@ class UserController extends Controller {
      * @return Response
      */
     public function index() {
-        $titulo = 'Usuários | Curso de Laravel 5';
+        $titulo = 'Usuários';
         $users  = User::paginate(5);
         $status = "";
 

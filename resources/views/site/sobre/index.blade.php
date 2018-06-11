@@ -1,1 +1,1 @@
-Sobre - Sistema em Laravel 5.5
+Sobre - Sistema em Laravel 5.6

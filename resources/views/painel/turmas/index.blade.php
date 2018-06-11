@@ -23,15 +23,15 @@
 
 <table class="table table-hover">
     <tr>
-        <th>Nome</th>
-        <th width="70px;"></th>
+        <th scope="col">Nome</th>
+        <th scope="col" width="150">Ações</th>
     </tr>
     @forelse($data as $turma)
     <tr>
         <td>{{$turma->nome}}</td>
         <td>
             <a class="edit" onclick="edit('turmas/{{$turma->id}}')">
-                <i class="fa fa-pencil-square-o"></i>
+                <i class="far fa-edit"></i>
             </a>
             <a class="delete" onclick="del('turmas/{{$turma->id}}')">
                 <i class="fa fa-times"></i>
@@ -69,7 +69,7 @@
 
                     {!! csrf_field() !!}
                     <div class="form-group">
-                        <input type="text" name="nome" class="form-control" placeholder="Nome da Turma">
+                        <input type="text" name="nome" class="form-control" placeholder="Numero da Turma">
                     </div>
                     
                     <div class="prelaoder" style="display: none">Enviando os dados, por favor aguarde...</div>

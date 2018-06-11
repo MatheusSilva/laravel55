@@ -2,26 +2,29 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>{{$titulo or 'Login | Sistema em Laravel 5.5 SysTeach'}}</title>
+        <title>{{$titulo or 'Login | Sistema em Laravel 5.6 SysTeach'}}</title>
 
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
         <link rel="stylesheet" type="text/css" href="{{url('assets/painel/css/systeach.css')}}">
         <link rel="stylesheet" type="text/css" href="{{url('assets/painel/css/systeach-responsivo.css')}}">
 
-        <!--JQuery-->
-        <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         
         <link rel="icon" type="image/png" href="{{url('assets/imgs/favicon.png')}}">
     </head>
     <body class="bg-padrao">
 
         <header>
-            <h1 class="oculta">{{$titulo or 'Login | Sistema em Laravel 5.5 SysTeach'}}</h1>
+            <h1 class="oculta">{{$titulo or 'Login | Sistema em Laravel 5.6 SysTeach'}}</h1>
         </header>
 
         <section class="login">
@@ -62,10 +65,6 @@
             </div>
         </div>
 
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
         <script>
             $(function(){
                 jQuery('form.form').submit(function(){

@@ -6,8 +6,6 @@
     <i class="fa fa-angle-double-left"></i> Voltar Para a Listagem dos Aluno
 </a>
 
-
-
 <h1 class="titulo-pg-painel">Listagem  dos Pais dos Alunos ({{$pais->count()}}):</h1>
 
 <div class="divider"></div>
@@ -15,7 +13,7 @@
 <div class="col-md-12">
     <form class="form-padrao form-inline padding-20 form-pesquisa" method="POST" send="pais/pesquisar-pais/">
         <a href="" class="btn-cadastrar" data-toggle="modal" data-target="#modalGestao"><i class="fa fa-plus-circle"></i> Cadastrar</a>
-        <input type="text" placeholder="Pesquisa" class="texto-pesquisa">
+        <input type="text" placeholder="Pesquisa" class="texto-pesquisa" />
     </form>
     
     @if( isset($palavraPesquisa) )
@@ -25,9 +23,9 @@
 
 <table class="table table-hover">
     <tr>
-        <th>Nome</th>
-        <th>E-mail</th>
-        <th width="70px;"></th>
+        <th scope="col">Nome</th>
+        <th scope="col">E-mail</th>
+        <th scope="col" width="70px;"></th>
     </tr>
     @forelse($pais as $pai)
     <tr>
@@ -83,16 +81,22 @@
                     </div>
                     
                     <div class="prelaoder" style="display: none">Enviando os dados, por favor aguarde...</div>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-primary">Salvar</button>
-                
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </div>
+
                 </form>
-            </div>
+            </div>    
         </div>
     </div>
 </div>
 
+@endsection
+
+@section('scripts')    
+    <script>
+        var urlAdd = 'http://localhost/laravel55/painel/pais';
+    </script>
 @endsection

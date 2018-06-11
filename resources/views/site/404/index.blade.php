@@ -1,1 +1,1 @@
-404 - Página não encontrada - Sistema em Laravel 5.5
+404 - Página não encontrada - Sistema em Laravel 5.6

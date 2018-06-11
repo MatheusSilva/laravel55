@@ -2,27 +2,23 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>{{ $titulo or 'Painel | Sistema em Laravel 5.5' }}</title>
+        <title>{{ $titulo or 'Painel | Sistema em Laravel 5.6' }}</title>
 
         <!-- Latest compiled and minified CSS -->
+     
         {{ Html::style('assets/css/bootstrap.min.css') }}
-
-        <!-- Optional theme -->
-        {{ Html::style('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css') }}
-        {{ Html::style('//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') }}
+        {{ Html::style('assets/css/sidebar.css') }}
+        {{ Html::style('https://use.fontawesome.com/releases/v5.0.13/css/all.css') }}
         {{ Html::style('assets/painel/css/systeach.css') }}
         {{ Html::style('assets/painel/css/systeach-responsivo.css') }}
-
-        <!--JQuery-->
-        {{ Html::script('assets/js/jquery-2.2.4.min.js') }}
     </head>
-    <body class="bg-padrao">
 
+    <body>
         <header>
-            <h1 class="oculta">{{$titulo or 'Painel | Sistema em Laravel 5.5'}}</h1>
+            <h1 class="oculta">{{$titulo or 'Painel | Sistema em Laravel 5.6'}}</h1>
         </header>
 
-        <section class="painel">
+        <section id="wrapper" class="painel toggled">
             <h1 class="oculta">Painel | SysTeach</h1>
 
             <div class="topo-painel col-md-12">
@@ -30,7 +26,7 @@
                     <i class="fa fa-expand"></i>
                 </a>
 
-                {{ Html::image('assets/imgs/logo-systeach.png', 'SysTeach', ['class' => 'logo-painel', 'title' => 'SysTeach - Sistema em Laravel 5.5'])  }}
+                {{ Html::image('assets/imgs/logo-systeach.png', 'SysTeach', ['class' => 'logo-painel', 'title' => 'SysTeach - Sistema em Laravel 5.6'])  }}
 
                 <select class="acoes-painel">
                     <option value="{{Auth::user()->name}}">{{Auth::user()->name}}</option>
@@ -39,22 +35,19 @@
             </div>
             <!--End Top-->
 
-            <div class="clear"></div>
-
-
             <!--Open Menu-->
             @include('painel.includes.menu')
-            <!--End menu-->
+            <!--End menu wrapper-->
+           
 
-            <section class="conteudo col-md-10">
-                <div class="cont">
+            <section class="conteudo page-content-wrapper">
+                <div class="cont container-fluid">
                     @yield('content')
                 </div>
             </section>
-            <!--End ConteÃºdo-->
+
+            <!--End Conteudo-->
         </section>
-
-
 
         <!-- Modal Para Deletar Algo -->
         <div class="modal fade" id="modalConfirmacaoDeletar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -77,12 +70,18 @@
                   </div>
               </div>
         </div>
-        <!-- Final do Modal de Deletar -->
-
 
         <!-- Latest compiled and minified JavaScript -->
-        {{ Html::script('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js') }}
+
+        {{ Html::script('assets/js/jquery.min.js') }}
+
+        {{ Html::script('assets/js/popper.min.js') }}
+
+        {{ Html::script('assets/js/bootstrap.min.js') }}
+
         {{ Html::script('assets/js/jquery.mask.js') }}
+
+        <!-- Final do Modal de Deletar -->
 
         @yield('scripts')
         

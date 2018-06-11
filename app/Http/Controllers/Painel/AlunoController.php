@@ -116,6 +116,8 @@ class AlunoController extends Controller
         $titulo = "Pais do Aluno: {$aluno->nome}";
         
         $paisAdd = \App\Models\Painel\Pai::pluck('nome', 'id');
+
+        //dd("abc12");exit;
         
         return view('painel.alunos.pais', compact('aluno', 'pais', 'titulo', 'paisAdd', 'id'));
     }
@@ -141,6 +143,7 @@ class AlunoController extends Controller
     
     public function deletarPai($idAluno, $idPai)
     {
+        //dd("adasdasd");exit;
         return $this->aluno->find($idAluno)->getPais()->detach($idPai);
     }
     
